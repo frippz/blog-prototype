@@ -4,6 +4,8 @@
  * @author Fredrik Frodlund
  */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
 @media all {
   
   /**
@@ -105,14 +107,15 @@
    * Fonts & sizes
    */
   html {
-    font: 87.5%/1.5 Helvetica, Arial, sans-serif; /* Base font size of 14px */
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+    font: 100%/1.5 "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
   }
   
   code,
   kbd,
   pre {
-    font-family: Monaco, Courier, "Courier New", Tahoma;
+    font-family: Monaco, Courier, "Courier New", monospace;
   }
   
   
