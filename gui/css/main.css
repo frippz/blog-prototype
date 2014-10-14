@@ -15,7 +15,7 @@
   /**
    * Header (banner)
    */
-  *[role="banner"] {
+  [role="banner"] {
     background: #efefef;
     border-bottom: 1px solid #ccc;
     padding: 1.75em 1em 1em;
@@ -24,21 +24,21 @@
   /**
    * Main
    */
-  *[role="main"] {
+  [role="main"] {
     padding: 1em
   }
   
   /**
    * Footer (contentinfo)
    */
-  *[role="contentinfo"] {
+  [role="contentinfo"] {
     padding: 1em
   }
   
   /**
    * Super cool rainbow banner!
    */
-  *[role="banner"] {
+  [role="banner"] {
     background-image: linear-gradient(
       to right,
       #142a06 0,
