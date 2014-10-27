@@ -13,37 +13,27 @@
 @media all {
   
   /**
-   * Resets, basic typography and colors
+   * The Lobotomized Owl
    */
-  blockquote,body,caption,div,dl,dt,dd,form,fieldset,
-  h1,h2,h3,h4,h5,h6,html,li,ul,ol,p,pre,textarea,table,td,th {
+  * + * {
+    margin-top: 1em;
+  }
+  
+  /**
+   * HTML5 elements legacy reset
+   */
+  article,aside,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section {
+    display:block;
+  }
+  
+  /**
+   * Reset body & html spacing
+   */
+  body,
+  html {
     margin: 0;
     padding: 0;
-  }
-  
-  address,dl,fieldset,p,pre,ul,ol,table {
-    margin: 0 0 1.5em;
-  }
-  
-  ul,ol,dd {
-    margin-left: 2.857em;
-  }
-  
-  td ul,td ol {
-    margin-left: 1.071em;
-  }
-  
-  ol ul,ul ol,ul ul,ol ol,td ul,td ol {
-    margin-bottom: 0;
-  }
-  
-  blockquote {
-    margin: 1em 2.857em;
-    font-style: italic;
-  }
-  
-  dt {
-    font-weight: bold;
   }
   
   /**
@@ -52,8 +42,7 @@
   * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-        box-sizing: border-box;
+            box-sizing: border-box;
   }
   
   /**
@@ -74,7 +63,7 @@
   th,
   td {
     vertical-align: top;
-    padding: 2px 3px;
+    padding: 0.125em 0.188em;
   }
   
   caption,
@@ -109,6 +98,7 @@
   
   /**
    * Fonts & sizes
+   * Base size set to 16px
    */
   html {
     font: 100%/1.5 "Roboto Slab", Helvetica, Arial, sans-serif;
@@ -127,31 +117,21 @@
    * Headings
    */
   h1,h2,h3,h4,h5,h6 {
-    margin: 1em 0 0.2em;
     color: #111;
     font-weight: normal;
-  }
-  
-  h1:first-child,
-  h2:first-child,
-  h3:first-child,
-  h4:first-child {
-    margin-top: 0;
+    margin: 0;
   }
   
   h1 {
     font-size: 2.3077em;
-    line-height: 1.1667em;
   }
   
   h2 {
     font-size: 1.6923em;
-    line-height: 1.25em;
   }
   
   h3 {
     font-size: 1.4615em;
-    line-height: 1.3158em;
   }
   
   h4 {
@@ -170,7 +150,7 @@
    */
   a,
   a:visited {
-    color: #333;
+    color: inherit;
   }
   a:hover,
   a:focus,
