@@ -35,7 +35,8 @@
    * Footer (contentinfo)
    */
   [role="contentinfo"] {
-    
+    background: #444;
+    color: #fff;
   }
   
   /**
