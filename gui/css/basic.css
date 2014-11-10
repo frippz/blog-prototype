@@ -179,5 +179,18 @@
     display: none;
   }
 
+
+  /**
+   * Visually hidden (still visible to AT:s)
+   */
+  .offscreen {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
 /* END @media all */
 }
