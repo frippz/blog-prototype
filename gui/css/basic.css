@@ -6,19 +6,19 @@
 
 /**
  * Font imports
- * TODO Integrate fonts directly into project
+ * TODO Integrate fonts directly into project?
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
 
 @media all {
-  
+
   /**
    * The Lobotomized Owl
    */
   * + * {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
-  
+
   /**
    * HTML5 elements legacy reset
    */
@@ -26,7 +26,7 @@
   footer,header,hgroup,menu,nav,section {
     display:block;
   }
-  
+
   /**
    * Reset body & html spacing
    */
@@ -35,7 +35,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   /**
    * Reset box sizing
    */
@@ -44,7 +44,7 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
-  
+
   /**
    * Tables
    */
@@ -53,39 +53,39 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
-  
+
   table,
   th,
   td {
     border: 0;
   }
-  
+
   th,
   td {
     vertical-align: top;
     padding: 0.125em 0.188em;
   }
-  
+
   caption,
   th {
     font-weight: bold;
     text-align: left;
   }
-  
+
   tbody th {
     color: #fff;
     background: #333;
   }
-  
-  
+
+
   /**
    * Images
    */
   img {
     border: none;
   }
-  
-  
+
+
   /**
    * Body styling
    */
@@ -94,8 +94,8 @@
     color: #333;
     background: #fff;
   }
-  
-  
+
+
   /**
    * Fonts & sizes
    * Base size set to 16px
@@ -105,14 +105,14 @@
     font-weight: 300;
     -webkit-text-size-adjust: 100%;
   }
-  
+
   code,
   kbd,
   pre {
     font-family: Monaco, Courier, "Courier New", monospace;
   }
-  
-  
+
+
   /**
    * Headings
    */
@@ -120,30 +120,30 @@
     font-weight: normal;
     margin: 0;
   }
-  
+
   h1 {
     font-size: 2.3077em;
   }
-  
+
   h2 {
     font-size: 1.6923em;
   }
-  
+
   h3 {
     font-size: 1.4615em;
   }
-  
+
   h4 {
     font-size: 1.2308em;
   }
-  
+
   h5,
   h6 {
     font-weight: bold;
     font-size: 1em;
   }
-  
-  
+
+
   /**
    *Links
    */
@@ -156,8 +156,8 @@
   a:active {
     color: #666;
   }
-  
-  
+
+
   /**
    * Emphasis
    */
@@ -165,12 +165,11 @@
   strong {
     font-weight: bold;
   }
-  
+
   i,
   em {
     font-style: italic;
   }
-  
 
 
   /**
