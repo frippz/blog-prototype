@@ -5,16 +5,16 @@
  */
 
 @media screen, projection {
-  
+
   /**
-   * Main elements spacing
+   * Landmark content
    */
-  [role="banner"],
-  [role="main"],
-  [role="contentinfo"] {
+  .landmark-content {
+    max-width: 40em;
+    margin: 0 auto;
     padding: 0 1em;
   }
-  
+
   /**
    * Header (banner)
    */
