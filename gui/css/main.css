@@ -69,21 +69,6 @@
     content: "\e62d";
   }
 
-  /**
-   * Main
-   */
-  [role="main"] {
-
-  }
-
-  /**
-   * Footer (contentinfo)
-   */
-  [role="contentinfo"] {
-    background: #444;
-    color: #fff;
-    padding: 1em 0;
-  }
 
   /**
    * Content styling
