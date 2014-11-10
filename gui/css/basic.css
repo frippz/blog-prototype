@@ -171,5 +171,14 @@
     font-style: italic;
   }
   
+
+
+  /**
+   * Hidden elements (both visually and for AT:s)
+   */
+  [hidden] {
+    display: none;
+  }
+
 /* END @media all */
 }
