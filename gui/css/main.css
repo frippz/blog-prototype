@@ -88,6 +88,16 @@
   /**
    * Content styling
    */
+  article + article {
+    margin-top: 2em;
+  }
+  article + article:before {
+    color: #ccc;
+    content: "✣";
+    display: block;
+    text-align: center;
+    margin-bottom: 2em;
+  }
   article .article-link {
     text-decoration: none;
   }
