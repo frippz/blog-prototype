@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-@media screen, projection {
+@media only screen {
 
   /**
    * Landmark content
@@ -168,4 +168,4 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-}
+}/* END @media only screen */
