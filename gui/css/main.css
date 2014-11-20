@@ -100,7 +100,9 @@
    * Footer (contentinfo)
    */
   [role="contentinfo"] {
-    padding: 0 0 2em;
+    background: #efefef;
+    border-top: 1px solid #ccc;
+    padding: 1em 0 2em;
   }
   .social-stuff {
     list-style: none;
