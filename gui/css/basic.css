@@ -1,0 +1,197 @@
+/**
+ * basic.css
+ *
+ * @author Fredrik Frodlund
+ */
+
+/**
+ * Font imports
+ * TODO Integrate fonts directly into project?
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
+@media all {
+
+  /**
+   * The Lobotomized Owl
+   */
+  * + * {
+    margin-top: 1.5em;
+  }
+
+  /**
+   * HTML5 elements legacy reset
+   */
+  article,aside,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section {
+    display:block;
+  }
+
+  /**
+   * Reset body & html spacing
+   */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  /**
+   * Reset box sizing
+   */
+  * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  /**
+   * Tables
+   */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table,
+  th,
+  td {
+    border: 0;
+  }
+
+  th,
+  td {
+    vertical-align: top;
+    padding: 0.125em 0.188em;
+  }
+
+  caption,
+  th {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  tbody th {
+    color: #fff;
+    background: #333;
+  }
+
+
+  /**
+   * Images
+   */
+  img {
+    border: none;
+  }
+
+
+  /**
+   * Body styling
+   */
+  html,
+  body {
+    color: #333;
+    background: #fff;
+  }
+
+
+  /**
+   * Fonts & sizes
+   * Base size set to 16px
+   */
+  html {
+    font: 100%/1.5 "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  code,
+  kbd,
+  pre {
+    font-family: Monaco, Courier, "Courier New", monospace;
+  }
+
+
+  /**
+   * Headings
+   */
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.3077em;
+  }
+
+  h2 {
+    font-size: 1.6923em;
+  }
+
+  h3 {
+    font-size: 1.4615em;
+  }
+
+  h4 {
+    font-size: 1.2308em;
+  }
+
+  h5,
+  h6 {
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+
+  /**
+   *Links
+   */
+  a,
+  a:visited {
+    color: inherit;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    color: inherit;
+  }
+
+
+  /**
+   * Emphasis
+   */
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  i,
+  em {
+    font-style: italic;
+  }
+
+
+  /**
+   * Hidden elements (both visually and for AT:s)
+   */
+  [hidden],
+  [aria-label="hidden"] {
+    display: none;
+  }
+
+
+  /**
+   * Visually hidden (still visible to AT:s)
+   */
+  .offscreen {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+/* END @media all */
+}
