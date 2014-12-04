@@ -227,7 +227,7 @@
    * Icon font definitions
    */
   #main-nav a:before,
-  article h3 a:before,
+  article .article-link:before,
   .social-stuff a:before {
     font-family: 'icomoon';
     speak: none;
