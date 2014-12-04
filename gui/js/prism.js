@@ -1,8 +1,4 @@
-
-/* **********************************************
-     Begin prism-core.js
-********************************************** */
-
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+css-extras+clike+javascript+bash+git */
 self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (
@@ -427,12 +423,7 @@ return self.Prism;
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = Prism;
 }
-
-
-/* **********************************************
-     Begin prism-markup.js
-********************************************** */
-
+;
 Prism.languages.markup = {
 	'comment': /<!--[\w\W]*?-->/g,
 	'prolog': /<\?.+?\?>/,
@@ -474,12 +465,7 @@ Prism.hooks.add('wrap', function(env) {
 		env.attributes['title'] = env.content.replace(/&amp;/, '&');
 	}
 });
-
-
-/* **********************************************
-     Begin prism-css.js
-********************************************** */
-
+;
 Prism.languages.css = {
 	'comment': /\/\*[\w\W]*?\*\//g,
 	'atrule': {
@@ -529,12 +515,22 @@ if (Prism.languages.markup) {
 			alias: 'language-css'
 		}
 	}, Prism.languages.markup.tag);
-}
+};
+Prism.languages.css.selector = {
+	pattern: /[^\{\}\s][^\{\}]*(?=\s*\{)/g,
+	inside: {
+		'pseudo-element': /:(?:after|before|first-letter|first-line|selection)|::[-\w]+/g,
+		'pseudo-class': /:[-\w]+(?:\(.*\))?/g,
+		'class': /\.[-:\.\w]+/g,
+		'id': /#[-:\.\w]+/g
+	}
+};
 
-/* **********************************************
-     Begin prism-clike.js
-********************************************** */
-
+Prism.languages.insertBefore('css', 'ignore', {
+	'hexcode': /#[\da-f]{3,6}/gi,
+	'entity': /\\[\da-f]{1,8}/gi,
+	'number': /[\d%\.]+/g
+});;
 Prism.languages.clike = {
 	'comment': [
 		{
@@ -567,12 +563,7 @@ Prism.languages.clike = {
 	'ignore': /&(lt|gt|amp);/gi,
 	'punctuation': /[{}[\];(),.:]/g
 };
-
-
-/* **********************************************
-     Begin prism-javascript.js
-********************************************** */
-
+;
 Prism.languages.javascript = Prism.languages.extend('clike', {
 	'keyword': /\b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|function|get|if|implements|import|in|instanceof|interface|let|new|null|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\b/g,
 	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?|NaN|-?Infinity)\b/g
@@ -600,63 +591,98 @@ if (Prism.languages.markup) {
 		}
 	});
 }
-
-
-/* **********************************************
-     Begin prism-file-highlight.js
-********************************************** */
-
-(function(){
-
-if (!self.Prism || !self.document || !document.querySelector) {
-	return;
-}
-
-var Extensions = {
-	'js': 'javascript',
-	'html': 'markup',
-	'svg': 'markup',
-	'xml': 'markup',
-	'py': 'python',
-	'rb': 'ruby'
-};
-
-Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function(pre) {
-	var src = pre.getAttribute('data-src');
-	var extension = (src.match(/\.(\w+)$/) || [,''])[1];
-	var language = Extensions[extension] || extension;
-	
-	var code = document.createElement('code');
-	code.className = 'language-' + language;
-	
-	pre.textContent = '';
-	
-	code.textContent = 'Loading…';
-	
-	pre.appendChild(code);
-	
-	var xhr = new XMLHttpRequest();
-	
-	xhr.open('GET', src, true);
-
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState == 4) {
-			
-			if (xhr.status < 400 && xhr.responseText) {
-				code.textContent = xhr.responseText;
-			
-				Prism.highlightElement(code);
-			}
-			else if (xhr.status >= 400) {
-				code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-			}
-			else {
-				code.textContent = '✖ Error: File does not exist or is empty';
-			}
+;
+Prism.languages.bash = Prism.languages.extend('clike', {
+	'comment': {
+		pattern: /(^|[^"{\\])(#.*?(\r?\n|$))/g,
+		lookbehind: true
+	},
+	'string': {
+		//allow multiline string
+		pattern: /("|')(\\?[\s\S])*?\1/g,
+		inside: {
+			//'property' class reused for bash variables
+			'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^\}]+\})/g
 		}
-	};
-	
-	xhr.send(null);
+	},
+	'keyword': /\b(if|then|else|elif|fi|for|break|continue|while|in|case|function|select|do|done|until|echo|exit|return|set|declare)\b/g
 });
 
-})();
+Prism.languages.insertBefore('bash', 'keyword', {
+	//'property' class reused for bash variables
+	'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^}]+\})/g
+});
+Prism.languages.insertBefore('bash', 'comment', {
+	//shebang must be before comment, 'important' class from css reused
+	'important': /(^#!\s*\/bin\/bash)|(^#!\s*\/bin\/sh)/g
+});
+;
+Prism.languages.git = {
+	/*
+	 * A simple one line comment like in a git status command
+	 * For instance:
+	 * $ git status
+	 * # On branch infinite-scroll
+	 * # Your branch and 'origin/sharedBranches/frontendTeam/infinite-scroll' have diverged,
+	 * # and have 1 and 2 different commits each, respectively.
+	 * nothing to commit (working directory clean)
+	 */
+	'comment': /^#.*$/m,
+
+	/*
+	 * a string (double and simple quote)
+	 */
+	'string': /("|')(\\?.)*?\1/gm,
+
+	/*
+	 * a git command. It starts with a random prompt finishing by a $, then "git" then some other parameters
+	 * For instance:
+	 * $ git add file.txt
+	 */
+	'command': {
+		pattern: /^.*\$ git .*$/m,
+		inside: {
+			/*
+			 * A git command can contain a parameter starting by a single or a double dash followed by a string
+			 * For instance:
+			 * $ git diff --cached
+			 * $ git log -p
+			 */
+			'parameter': /\s(--|-)\w+/m
+		}
+	},
+
+	/*
+	 * Coordinates displayed in a git diff command
+	 * For instance:
+	 * $ git diff
+	 * diff --git file.txt file.txt
+	 * index 6214953..1d54a52 100644
+	 * --- file.txt
+	 * +++ file.txt
+	 * @@ -1 +1,2 @@
+	 * -Here's my tetx file
+	 * +Here's my text file
+	 * +And this is the second line
+	 */
+	'coord': /^@@.*@@$/m,
+
+	/*
+	 * Regexp to match the changed lines in a git diff output. Check the example above.
+	 */
+	'deleted': /^-(?!-).+$/m,
+	'inserted': /^\+(?!\+).+$/m,
+
+	/*
+	 * Match a "commit [SHA1]" line in a git log output.
+	 * For instance:
+	 * $ git log
+	 * commit a11a14ef7e26f2ca62d4b35eac455ce636d0dc09
+	 * Author: lgiraudel
+	 * Date:   Mon Feb 17 11:18:34 2014 +0100
+	 *
+	 *     Add of a new line
+	 */
+	'commit_sha1': /^commit \w{40}$/m
+};
+;
