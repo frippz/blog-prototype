@@ -66,9 +66,6 @@
   #main-nav [href="/about/"]:before {
     content: "\e670";
   }
-  #main-nav [href="/archive/"]:before {
-    content: "\e62d";
-  }
 
 
   /**
