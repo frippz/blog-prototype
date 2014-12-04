@@ -93,6 +93,25 @@
     margin-top: 0;
   }
 
+
+  /**
+   * Code highlighting
+   */
+  article pre,
+  article code {
+    background: #efefef;
+    padding: 0 .3em;
+    outline: 1px solid #e4e4e4;
+  }
+  article pre {
+    padding: .3em .6em;
+  }
+  article pre code {
+    background: transparent;
+    padding: 0;
+    outline: 0;
+  }
+
   /**
    * Footer (contentinfo)
    */
