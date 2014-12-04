@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="gui/css/basic.css">
   <link rel="stylesheet" href="gui/css/main.css">
+  <link rel="stylesheet" href="gui/css/prism.css">
 </head>
 <body>
 
@@ -38,8 +39,25 @@
         <footer>
           Posted <time datetime="2014-11-08">8 Nov 2014</time>
         </footer>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula <code>function () {this code has no lang class set}</code> porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        <pre><code class="language-css">html {
+  padding: 2em 4em;
+}</code></pre>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <pre><code class="language-javascript">/**
+ * main.js
+ *
+ * Only runs in modern browsers via feature detection
+ * Requires support for querySelector, classList and addEventListener
+ */
+
+if('querySelector' in document && 'classList' in document.createElement('a') && 'addEventListener' in window) {
+
+  // Add class "js" to html element
+  document.querySelector('html').classList.add('js');
+
+}
+</code></pre>
         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
         <p>Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -64,5 +82,6 @@
 
   </footer>
 <script src="gui/js/main.js"></script>
+<script src="gui/js/prism.js"></script>
 </body>
 </html>
