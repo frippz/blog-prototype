@@ -36,6 +36,9 @@
   [role="banner"] h1 {
     padding: .5em 0 .25em;
   }
+  [role="banner"] h1 a {
+    text-decoration: none;
+  }
 
   /**
    * Navigation
