@@ -273,7 +273,7 @@
   blockquote:after {
     content: "”";
     bottom: -.8em;
-    right: .2em;
+    right: .25em;
   }
 
 
