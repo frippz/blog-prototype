@@ -72,9 +72,8 @@
     text-align: left;
   }
 
-  tbody th {
-    color: #fff;
-    background: #333;
+  tr:nth-child(even) {
+    background: rgba(0,0,0,0.05);
   }
 
 
