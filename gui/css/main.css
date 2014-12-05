@@ -248,6 +248,36 @@
 
 
   /**
+   * Pretty blockquotes
+   */
+  blockquote {
+    background: #f3f3f3;
+    border-radius: 1em;
+    font-style: italic;
+    margin: 1em;
+    padding: 1em 2.5em;
+    position: relative;
+  }
+  blockquote:before,
+  blockquote:after {
+    color: #dadada;
+    display: block;
+    font-size: 6em;
+    position: absolute;
+  }
+  blockquote:before {
+    content: "“";
+    top: -.2em;
+    left: -.1em;
+  }
+  blockquote:after {
+    content: "”";
+    bottom: -.8em;
+    right: .2em;
+  }
+
+
+  /**
    * Icon font definitions
    */
   #main-nav a:before,
