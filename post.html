@@ -10,36 +10,40 @@
 </head>
 <body>
 
-  <header role="banner">
+  <div role="banner">
 
     <div class="landmark-content">
       <h1>frippz</h1>
     </div>
 
-    <nav role="navigation">
+    <div role="navigation">
 
       <div class="landmark-content">
+
         <ul id="main-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
         </ul>
+
       </div>
       <!-- /landmark-content -->
 
-    </nav>
+    </div>
+    <!-- /navigation -->
 
-  </header>
+  </div>
+  <!-- /banner -->
 
-  <main role="main">
+  <div role="main">
 
     <div class="landmark-content">
 
-      <article role="article">
+      <div role="article">
         <h2><a href="#" class="article-link">The title of a blog post</a></h2>
-        <footer>
+        <div class="post-info">
           Posted <time datetime="2014-11-08">8 Nov 2014</time>
-        </footer>
-        <p>Nullam quis risus eget urna mallis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula <code>function () {this code has no lang class set}</code> porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        </div>
+        <p>Nullam quis risus eget urna mallis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula <code>this &lt;code&gt; has no lang class</code> porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
         <pre><code class="language-css">html {
   padding: 2em 4em;
 }</code></pre>
@@ -48,14 +52,14 @@
         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
         <p>Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      </article>
+      </div>
 
     </div>
     <!-- /landmark-content -->
 
-  </main>
+  </div>
 
-  <footer role="contentinfo">
+  <div role="contentinfo">
 
     <div class="landmark-content">
 
@@ -67,7 +71,9 @@
     </div>
     <!-- /landmark-content -->
 
-  </footer>
+  </div>
+  <!-- /contentinfo -->
+
 <script src="gui/js/main.js"></script>
 <script src="gui/js/prism.js"></script>
 </body>

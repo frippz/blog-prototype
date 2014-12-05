@@ -71,10 +71,10 @@
   /**
    * Articles
    */
-  article + article {
+  [role="article"] + [role="article"] {
     margin-top: 2em;
   }
-  article + article:before {
+  [role="article"] + [role="article"]:before {
     color: #ccc;
     content: "✣";
     display: block;
@@ -82,13 +82,13 @@
     text-align: center;
     margin-bottom: 2em;
   }
-  article .article-link {
+  [role="article"] .article-link {
     text-decoration: none;
   }
-  article .article-link:before {
+  [role="article"] .article-link:before {
     content: "\e607";
   }
-  article footer {
+  [role="article"] .post-info {
     font-size: .8em;
     margin-top: 0;
   }
@@ -97,23 +97,23 @@
   /**
    * Code highlighting
    */
-  article pre,
-  article code {
+  [role="article"] pre,
+  [role="article"] code {
     background: #efefef;
     padding: 0 .3em;
     outline: 1px solid #e4e4e4;
   }
-  article pre {
+  [role="article"] pre {
     padding: .3em .6em;
   }
-  article pre code {
+  [role="article"] pre code {
     background: transparent;
     padding: 0;
     outline: 0;
   }
 
   /**
-   * Footer (contentinfo)
+   * Contentinfo
    */
   [role="contentinfo"] {
     background: #efefef;
@@ -244,7 +244,7 @@
    * Icon font definitions
    */
   #main-nav a:before,
-  article .article-link:before,
+  [role="article"] .article-link:before,
   .social-stuff a:before {
     font-family: 'icomoon';
     speak: none;
