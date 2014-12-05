@@ -95,6 +95,10 @@
     font-size: .8em;
     margin-top: 0;
   }
+  [role="article"] img {
+    height: auto;
+    max-width: 100%;
+  }
 
 
   /**
