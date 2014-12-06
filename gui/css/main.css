@@ -298,7 +298,7 @@
     transition: all .25s ease;
   }
 
-}/* END @media only screen */
+}/* END @media screen */
 
 @media only screen and (max-width: 20em) {
 
