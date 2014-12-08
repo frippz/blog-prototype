@@ -85,6 +85,14 @@
     height: auto;
     max-width: 100%;
   }
+  img.left {
+    float: left;
+    margin: 0 1em .5em 0;
+  }
+  img.right {
+    float: right;
+    margin: 0 0 .5em 1em;
+  }
 
 
   /**
