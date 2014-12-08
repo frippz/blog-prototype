@@ -316,6 +316,18 @@
 
 }
 
+@media only screen and (max-width: 28em) {
+
+  img.left,
+  img.right {
+    display: block;
+    float: none;
+    margin: 1.5em 0 0;
+    width: auto;
+  }
+
+}
+
 @media only screen and (max-width: 20em) {
 
   /* Stack menu items */
