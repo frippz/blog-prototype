@@ -24,6 +24,7 @@
     max-width: 40em;
     margin: 0 auto;
     padding: 0 1em;
+    overflow: hidden;
   }
 
   /**
@@ -133,28 +134,38 @@
   [role="contentinfo"] a:active {
     color: #0c3;
   }
-  /* Social links */
-  .social-stuff {
+
+  /* Footer links */
+  .social {
+    float: left;
+  }
+  .subscribe {
+    float: right;
+  }
+  .footer-links {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .social-stuff li {
+  .footer-links li {
     margin-top:  0;
   }
-  .social-stuff a {
+  .footer-links a {
     font-size: .8em;
     font-weight: 400;
     text-decoration: none;
   }
-  .social-stuff a:before {
+  .footer-links a:before {
     color: #666;
   }
-  .social-stuff [href^="https://twitter.com"]:before {
+  .footer-links [href^="https://twitter.com"]:before {
     content: "\e76d";
   }
-  .social-stuff [href^="https://github.com"]:before {
+  .footer-links [href^="https://github.com"]:before {
     content: "\e788";
+  }
+  .footer-links [href$=".xml"]:before {
+    content: "\e601";
   }
 
   /**
@@ -278,7 +289,7 @@
    */
   #main-nav a:before,
   [role="article"] .article-link:before,
-  .social-stuff a:before {
+  .footer-links a:before {
     font-family: 'icomoon';
     speak: none;
     font-style: normal;
@@ -341,6 +352,15 @@
   }
   .more-articles a[class] + a[class] {
     margin-top: .5em;
+  }
+
+  /* Stack footer links */
+  .social,
+  .subscribe {
+    float: none;
+  }
+  .subscribe {
+    margin-top: 1em;
   }
 
 }
