@@ -261,6 +261,7 @@
     text-align: center;
   }
   .not-found [role="article"] #svg-404 {
+    height: 8.5em;
     fill: #ccc;
   }
 
