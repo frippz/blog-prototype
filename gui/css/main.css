@@ -322,7 +322,7 @@
     flex-direction: column;
   }
   [role="main"] {
-    flex: 1;
+    flex: 1 0 auto;
   }
 
 }
