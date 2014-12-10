@@ -337,7 +337,7 @@
     flex: 1 0 auto;
   }
 
-}
+}/* END @media only screen */
 
 @media only screen and (max-width: 28em) {
 
@@ -349,7 +349,7 @@
     width: auto;
   }
 
-}
+}/* END @media only screen and (max-width: 28em) */
 
 @media only screen and (max-width: 18em) {
 
@@ -375,4 +375,4 @@
     margin-top: 1em;
   }
 
-}
+}/* END @media only screen and (max-width: 18em) */
