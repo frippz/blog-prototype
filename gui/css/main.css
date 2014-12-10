@@ -255,6 +255,17 @@
 
 
   /**
+   * Custom error page (404)
+   */
+  .not-found [role="article"] {
+    text-align: center;
+  }
+  .not-found [role="article"] #svg-404 {
+    fill: #ccc;
+  }
+
+
+  /**
    * Pretty blockquotes
    */
   blockquote {
