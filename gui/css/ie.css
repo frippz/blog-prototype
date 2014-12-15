@@ -23,7 +23,6 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/RobotoSlab-Regular.eot");
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
-       url("../fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype");
 }
 
