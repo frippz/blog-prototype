@@ -4,17 +4,6 @@
  * @author Fredrik Frodlund
  */
 
-@font-face {
-  font-family: "icomoon";
-  src:url("../fonts/icomoon.eot?oyvtcb");
-  src:url("../fonts/icomoon.eot?#iefixoyvtcb") format("embedded-opentype"),
-      url("../fonts/icomoon.woff?oyvtcb") format("woff"),
-      url("../fonts/icomoon.ttf?oyvtcb") format("truetype"),
-      url("../fonts/icomoon.svg?oyvtcb#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @media screen {
 
   /**
