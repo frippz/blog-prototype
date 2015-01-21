@@ -206,12 +206,12 @@
    * Visually hidden (still visible to AT:s)
    */
   .offscreen {
-    position: absolute;
+    height: 1px;
     left: -10000px;
+    overflow: hidden;
+    position: absolute;
     top: auto;
     width: 1px;
-    height: 1px;
-    overflow: hidden;
   }
 
 /* END @media all */
