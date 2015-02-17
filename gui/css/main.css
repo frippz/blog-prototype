@@ -116,12 +116,12 @@
   }
   [role="contentinfo"] a,
   [role="contentinfo"] a:visited {
-    color: #080;
+    color: #007f00;
   }
   [role="contentinfo"] a:hover,
   [role="contentinfo"] a:focus,
   [role="contentinfo"] a:active {
-    color: #0c3;
+    border-bottom: 1px solid #666;
   }
 
   /* Footer links */
