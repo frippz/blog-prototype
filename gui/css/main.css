@@ -261,7 +261,6 @@
   blockquote {
     background: #f3f3f3;
     border-radius: 1em;
-    font-style: italic;
     margin: 1em;
     padding: 1em 2.5em;
     position: relative;
@@ -271,6 +270,7 @@
     color: #dadada;
     display: block;
     font-size: 6em;
+    font-style: italic;
     position: absolute;
   }
   blockquote:before {
