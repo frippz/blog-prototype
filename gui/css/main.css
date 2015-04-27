@@ -284,6 +284,23 @@
     right: .25em;
   }
 
+  /* Nested blockquotes */
+  blockquote blockquote {
+    background: transparent;
+    border-left: 0.25em solid #dadada;
+    border-radius: 0;
+    margin: 1em 0 0;
+    padding: 0 0 0 .5em;
+  }
+  blockquote blockquote:first-child {
+    margin-top: 2em;
+  }
+  blockquote blockquote:after,
+  blockquote blockquote:before {
+    content: "";
+    display: none;
+  }
+
 
   /**
    * Icon font definitions
