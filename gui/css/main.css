@@ -10,10 +10,10 @@
    * Landmark content
    */
   .landmark-content {
-    max-width: 40em;
     margin: 0 auto;
-    padding: 0 1em;
+    max-width: 40em;
     overflow: hidden;
+    padding: 0 1em;
   }
 
 
@@ -37,8 +37,8 @@
    */
   [role="navigation"] {
     background: #fff;
-    border: 1px solid #ccc;
     border-width: 1px 0 1px 0;
+    border: 1px solid #ccc;
     margin-top: 0;
   }
   #main-nav {
@@ -74,9 +74,9 @@
     color: #ccc;
     content: "✣";
     display: block;
+    margin-bottom: 2em;
     speak: none;
     text-align: center;
-    margin-bottom: 2em;
   }
   [role="article"] .article-link {
     text-decoration: none;
@@ -96,16 +96,16 @@
   [role="article"] pre,
   [role="article"] code {
     background: #efefef;
-    padding: 0 .3em;
     outline: 1px solid #e4e4e4;
+    padding: 0 .3em;
   }
   [role="article"] pre {
     padding: .3em .6em;
   }
   [role="article"] pre code {
     background: transparent;
-    padding: 0;
     outline: 0;
+    padding: 0;
   }
 
 
@@ -207,14 +207,14 @@
       #172327 99.9%,
       #172327 100%
     );
-    background-size: 100% .75em;
     background-repeat: no-repeat;
+    background-size: 100% .75em;
     content: " ";
     display: block;
     height: .75em;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
   }
 
@@ -255,8 +255,8 @@
     text-align: center;
   }
   .not-found [role="article"] #svg-404 {
-    height: 8.5em;
     fill: #ccc;
+    height: 8.5em;
   }
 
 
@@ -280,12 +280,12 @@
   }
   blockquote:before {
     content: "“";
-    top: -.2em;
     left: -.1em;
+    top: -.2em;
   }
   blockquote:after {
-    content: "”";
     bottom: -.8em;
+    content: "”";
     right: .25em;
   }
 
@@ -314,13 +314,14 @@
   [role="article"] .article-link:before,
   .footer-links a:before {
     font-family: 'icomoon';
-    speak: none;
     font-style: normal;
-    font-weight: normal;
     font-variant: normal;
-    text-transform: none;
+    font-weight: normal;
     line-height: 1;
     padding-right: .25em;
+    speak: none;
+    text-transform: none;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -342,8 +343,8 @@
    */
   body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
   }
   [role="main"] {
     flex: 1 0 auto;
