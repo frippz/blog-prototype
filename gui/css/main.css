@@ -16,6 +16,7 @@
     overflow: hidden;
   }
 
+
   /**
    * Header (banner)
    */
@@ -29,6 +30,7 @@
   [role="banner"] h1 a {
     text-decoration: none;
   }
+
 
   /**
    * Navigation
@@ -52,6 +54,7 @@
     text-decoration: none;
     font-weight: bold;
   }
+
   /* Navigation icons */
   #main-nav [href="/"]:before {
     content: "\e600";
@@ -105,6 +108,7 @@
     outline: 0;
   }
 
+
   /**
    * Contentinfo
    */
@@ -156,6 +160,7 @@
   .footer-links [href$=".xml"]:before {
     content: "\e601";
   }
+
 
   /**
    * Super cool rainbow banner!
@@ -320,6 +325,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+
   /**
    * Eye candy & visual fluff
    */
@@ -347,6 +353,9 @@
 
 @media only screen and (max-width: 28em) {
 
+  /**
+   * Images
+   */
   img.left,
   img.right {
     display: block;
