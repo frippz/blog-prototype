@@ -32,7 +32,6 @@
 
   /**
    * Reset box sizing
-   * (inherit from html in order to override easier of need arises)
    */
   html {
     box-sizing: border-box;
