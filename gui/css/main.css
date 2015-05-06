@@ -287,7 +287,7 @@
   /* Nested blockquotes */
   blockquote blockquote {
     background: transparent;
-    border-left: 0.25em solid #dadada;
+    border-left: .25em solid #dadada;
     border-radius: 0;
     margin: 1em 0 0;
     padding: 0 0 0 .5em;
@@ -315,7 +315,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    padding-right: 0.25em;
+    padding-right: .25em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
