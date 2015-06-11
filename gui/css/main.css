@@ -37,8 +37,8 @@
    */
   [role="navigation"] {
     background: #fff;
+    border: 0 solid #ccc;
     border-width: 1px 0 1px 0;
-    border: 1px solid #ccc;
     margin-top: 0;
   }
   #main-nav {
