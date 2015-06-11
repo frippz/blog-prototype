@@ -48,7 +48,7 @@
   }
   #main-nav li {
     display: inline;
-    margin: 0 1em 0 0;
+    padding-right: 1em;
   }
   #main-nav a {
     text-decoration: none;
