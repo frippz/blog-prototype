@@ -308,6 +308,42 @@
 
 
   /**
+   * Footnotes
+   */
+
+  /* Initialiazing a 'footnotes' counter on the wrapper */
+  [role="article"] {
+    counter-reset: footnotes;
+  }
+
+  /* Inline footnotes references */
+  [aria-describedby="footnote-label"] {
+    counter-increment: footnotes;
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+    outline: none;
+  }
+
+  /* Numbered references */
+  [aria-describedby="footnote-label"]:after {
+    content: '[' counter(footnotes) ']';
+    vertical-align: super;
+    font-size: 0.5em;
+    margin-left: 2px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  /* Resetting the default focused styles on the number */
+  [aria-describedby="footnote-label"]:focus:after {
+    outline: thin dotted;
+    outline-offset: 2px;
+  }
+
+
+  /**
    * Icon font definitions
    */
   #main-nav a:before,
