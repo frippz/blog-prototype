@@ -317,7 +317,7 @@
   }
 
   /* Inline footnotes references */
-  [aria-describedby="footnote-label"] {
+  [aria-describedby="footnotes"] {
     counter-increment: footnotes;
     text-decoration: none;
     color: inherit;
@@ -326,7 +326,7 @@
   }
 
   /* Numbered references */
-  [aria-describedby="footnote-label"]:after {
+  [aria-describedby="footnotes"]:after {
     content: '[' counter(footnotes) ']';
     vertical-align: super;
     font-size: 0.5em;
@@ -337,7 +337,7 @@
   }
 
   /* Resetting the default focused styles on the number */
-  [aria-describedby="footnote-label"]:focus:after {
+  [aria-describedby="footnotes"]:focus:after {
     outline: thin dotted;
     outline-offset: 2px;
   }
