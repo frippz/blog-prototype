@@ -51,8 +51,8 @@
     padding-right: 1em;
   }
   #main-nav a {
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
   }
 
   /* Navigation icons */
@@ -141,7 +141,7 @@
     padding: 0;
   }
   .footer-links li {
-    margin-top:  0;
+    margin-top: 0;
   }
   .footer-links a {
     font-size: .8em;
@@ -318,22 +318,22 @@
 
   /* Inline footnotes references */
   [aria-describedby="footnotes"] {
-    counter-increment: footnotes;
-    text-decoration: none;
     color: inherit;
+    counter-increment: footnotes;
     cursor: default;
     outline: none;
+    text-decoration: none;
   }
 
   /* Numbered references */
   [aria-describedby="footnotes"]:after {
-    content: '[' counter(footnotes) ']';
-    vertical-align: super;
-    font-size: 0.5em;
-    margin-left: 2px;
     color: blue;
-    text-decoration: underline;
+    content: "[" counter(footnotes) "]";
     cursor: pointer;
+    font-size: .5em;
+    margin-left: 2px;
+    text-decoration: underline;
+    vertical-align: super;
   }
 
   /* Resetting the default focused styles on the number */
@@ -346,10 +346,8 @@
   /**
    * Icon font definitions
    */
-  #main-nav a:before,
-  [role="article"] .article-link:before,
-  .footer-links a:before {
-    font-family: 'icomoon';
+  #main-nav a:before, [role="article"] .article-link:before, .footer-links a:before {
+    font-family: "icomoon";
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
