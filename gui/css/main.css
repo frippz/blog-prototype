@@ -309,6 +309,9 @@
 
   /**
    * Footnotes
+   *
+   * Inspired by an article by Hugo Giraudel
+   * (http://www.sitepoint.com/accessible-footnotes-css/)
    */
 
   /* Initialiazing a 'footnotes' counter on the wrapper */
