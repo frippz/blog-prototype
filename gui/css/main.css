@@ -80,13 +80,9 @@
     speak: none;
     text-align: center;
   }
-  [role="article"] h1 {
-    font-size: 2em;
-  }
   [role="article"] .article-link {
     text-decoration: none;
   }
-  [role="article"] h1:before,
   [role="article"] .article-link:before {
     content: "\e607";
   }
@@ -355,10 +351,7 @@
   /**
    * Icon font definitions
    */
-  #main-nav a:before,
-  [role="article"] .article-link:before,
-  [role="article"] h1:before,
-  .footer-links a:before {
+  #main-nav a:before, [role="article"] .article-link:before, .footer-links a:before {
     font-family: "icomoon";
     font-style: normal;
     font-variant: normal;
