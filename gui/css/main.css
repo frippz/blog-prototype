@@ -80,6 +80,9 @@
     speak: none;
     text-align: center;
   }
+  [role="article"] h1 {
+    font-size: 2em;
+  }
   [role="article"] .article-link {
     text-decoration: none;
   }
