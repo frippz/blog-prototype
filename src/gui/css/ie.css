@@ -14,14 +14,3 @@
   src: url("../fonts/icomoon.eot?oyvtcb");
   src: url("../fonts/icomoon.eot?#iefixoyvtcb") format("embedded-opentype");
 }
-
-/**
- * Robot Slab
- */
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/RobotoSlab-Regular.eot");
-  src: url("../fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype");
-}
