@@ -199,7 +199,8 @@
    */
   .more-articles {
     margin-top: 4em;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
   }
   .more-articles a {
     background: #333;
@@ -208,6 +209,7 @@
     display: block;
     margin-top: 0;
     padding: .35em 1em;
+    position: relative;
     text-decoration: none;
   }
   .more-articles a:hover,
@@ -215,11 +217,42 @@
   .more-articles a:active {
     background: #414141;
   }
-  .more-articles .older {
-    float: left;
-  }
+  .more-articles .older,
   .more-articles .newer {
-    float: right;
+    display: inline-block;
+  }
+
+  /* Hover arrows */
+  .more-articles .newer:after,
+  .more-articles .older:after {
+    display: block;
+    content: "";
+    border-top: 1.1em solid transparent;
+    border-bottom: 1.1em solid transparent;
+    position: absolute;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    height: 0;
+    width: 0;
+    border-radius: 0.5em;
+    transition: all .25s ease;
+  }
+  .more-articles .older:after {
+    border-right: 0 solid #333;
+    right: 97%;
+  }
+  .more-articles .newer:after {
+    border-left: 0 solid #333;
+    left: 97%;
+  }
+  .more-articles .older:hover:after {
+    border-right-width: 1.1em;
+    border-right-color: #414141;
+  }
+  .more-articles .newer:hover:after {
+    border-left-width: 1.1em;
+    border-left-color: #414141;
   }
 
 
