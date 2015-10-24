@@ -12,7 +12,8 @@ var gulp             = require('gulp'),
     eslint           = require('gulp-eslint'),
     htmlhint         = require('gulp-htmlhint'),
     csslint          = require('gulp-csslint'),
-    w3cjs            = require('gulp-w3cjs');
+    w3cjs            = require('gulp-w3cjs'),
+    dirSync          = require('gulp-directory-sync');
 
 // Configure paths
 var paths = {
@@ -22,7 +23,7 @@ var paths = {
   css: ['./src/gui/css/**/*.css'],
 
   // Static assets
-  images: ['./src/gui/i/**/*.*'],
+  images: './src/gui/i/',
   templates: ['./src/**/*.html'],
 
   // Outputs
@@ -109,7 +110,7 @@ gulp.task('watch', function() {
 // Copy image assets into /dist
 gulp.task('images', function(){
   gulp.src(paths.images)
-    .pipe(gulp.dest(paths.imgDest));
+    .pipe(dirSync(paths.images, paths.imgDest, { printSummary: true }));
 });
 
 // Copy template assets into /dist
