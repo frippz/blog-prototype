@@ -223,6 +223,9 @@
   .more-articles .newer {
     display: inline-block;
   }
+  .more-articles .newer {
+    margin-left: auto;
+  }
 
   /* Hover arrows */
   .more-articles .newer:after,
