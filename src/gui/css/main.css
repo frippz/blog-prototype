@@ -57,14 +57,6 @@
     text-decoration: none;
   }
 
-  /* Navigation icons */
-  #main-nav [href="/"]:before {
-    content: "\e600";
-  }
-  #main-nav [href="/about/"]:before {
-    content: "\e670";
-  }
-
 
   /**
    * Articles
@@ -82,9 +74,6 @@
   }
   [role="article"] .article-link {
     text-decoration: none;
-  }
-  [role="article"] .article-link:before {
-    content: "\e607";
   }
   [role="article"] .post-info {
     font-size: .8em;
@@ -142,26 +131,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  .footer-links li {
-    margin-top: 0;
-  }
-  .footer-links a {
-    font-size: .8em;
-    font-weight: 400;
-    text-decoration: none;
-  }
-  .footer-links a:before {
-    color: #666;
-  }
-  .footer-links [href^="https://twitter.com"]:before {
-    content: "\e76d";
-  }
-  .footer-links [href^="https://github.com"]:before {
-    content: "\e788";
-  }
-  .footer-links [href$=".xml"]:before {
-    content: "\e601";
   }
 
 
@@ -350,30 +319,22 @@
 
 
   /**
-   * Icon font definitions
-   */
-  #main-nav a:before, [role="article"] .article-link:before, .footer-links a:before {
-    font-family: "icomoon";
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-right: .25em;
-    speak: none;
-    text-transform: none;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-
-  /**
    * Eye candy & visual fluff
    */
   a {
     transition: all .25s ease;
   }
 
+
+  /**
+   * Inline SVG icons
+   */
+  .svg-icon {
+    display: inline-block;
+    fill: currentcolor;
+    height: 1.2em;
+    vertical-align: text-top;
+  }
 
   /**
    * Skip links
