@@ -96,7 +96,9 @@
   }
   [role="article"] pre code {
     background: transparent;
+    display: block;
     border: 0;
+    overflow-x: scroll;
     padding: 0;
   }
 
