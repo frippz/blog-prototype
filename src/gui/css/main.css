@@ -98,7 +98,7 @@
     background: transparent;
     display: block;
     border: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 0;
   }
 
