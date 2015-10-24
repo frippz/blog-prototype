@@ -113,6 +113,7 @@
   [role="contentinfo"] a,
   [role="contentinfo"] a:visited {
     color: #007f00;
+    text-decoration: none;
   }
   [role="contentinfo"] a:hover,
   [role="contentinfo"] a:focus,
@@ -128,6 +129,8 @@
     float: right;
   }
   .footer-links {
+    font-size: .8125em;
+    font-weight: bold;
     list-style: none;
     margin: 0;
     padding: 0;
