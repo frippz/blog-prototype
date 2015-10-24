@@ -102,7 +102,7 @@ gulp.task('watch', function() {
 // Copy image assets into /dist
 gulp.task('images', function(){
   gulp.src(paths.images)
-    .pipe(dirSync(paths.images, paths.imgDest, { printSummary: true }));
+    .pipe(dirSync(paths.images, paths.imgDest));
 });
 
 // Copy template assets into /dist
