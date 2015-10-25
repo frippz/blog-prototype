@@ -1,3 +1,10 @@
+/**
+ * gulpfile.js
+ *
+ * All the yummy build stuff!
+ */
+
+// Requirements
 var gulp             = require('gulp'),
     sourcemaps       = require('gulp-sourcemaps'),
     autoprefixer     = require('gulp-autoprefixer'),
