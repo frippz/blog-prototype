@@ -19,7 +19,8 @@ var gulp             = require('gulp'),
     eslint           = require('gulp-eslint'),
     htmlhint         = require('gulp-htmlhint'),
     w3cjs            = require('gulp-w3cjs'),
-    dirSync          = require('gulp-directory-sync');
+    dirSync          = require('gulp-directory-sync'),
+    webserver        = require('gulp-webserver');
 
 // Configure paths
 var paths = {
@@ -123,4 +124,14 @@ gulp.task('deploy', function (cb) {
   ghPages.publish(path.join(process.cwd(), paths.tplDest), cb);
 });
 
-gulp.task('default', ['watch', 'css', 'js', 'images', 'templates', 'lint']);
+// Web server
+gulp.task('webserver', function() {
+  gulp.src(paths.tplDest)
+    .pipe(webserver({
+      host: '0.0.0.0',
+      port: 4004,
+      livereload: true
+    }));
+});
+
+gulp.task('default', ['watch', 'css', 'js', 'images', 'templates', 'lint', 'webserver']);
