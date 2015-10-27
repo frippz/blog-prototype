@@ -11,7 +11,7 @@
    */
   .landmark-content {
     margin: 0 auto;
-    max-width: 40em;
+    max-width: 40rem;
     overflow: hidden;
     padding: 0 1em;
   }
@@ -46,14 +46,14 @@
   #main-nav {
     list-style: none;
     margin: 0;
-    padding: .25em 0;
+    padding: .5em 0;
   }
   #main-nav li {
     display: inline;
     padding-right: 1em;
   }
   #main-nav a {
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
   }
 
@@ -79,6 +79,12 @@
     font-size: .8em;
     margin-top: 0;
   }
+  [role="article"] > p:first-of-type:first-letter {
+    float: left;
+    font-size: 4.4em;
+    line-height: 1;
+    padding: 0 .1em 0 0;
+  }
 
 
   /**
@@ -86,9 +92,10 @@
    */
   [role="article"] pre,
   [role="article"] code {
-    background: #efefef;
+    background: #f2efec;
     border: 1px solid #e4e4e4;
     padding: 0 .3em;
+    text-shadow: 0 1px #fff;
   }
   [role="article"] pre {
     margin: 1.5em 0;
@@ -373,9 +380,9 @@
   .svg-icon {
     display: inline-block;
     fill: currentcolor;
-    height: 1.2em;
-    width: 1.2em;
-    vertical-align: text-top;
+    height: 1em;
+    width: 1em;
+    /* vertical-align: text-top; */
   }
 
   /**
