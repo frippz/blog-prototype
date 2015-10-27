@@ -20,7 +20,8 @@ var gulp             = require('gulp'),
     htmlhint         = require('gulp-htmlhint'),
     w3cjs            = require('gulp-w3cjs'),
     dirSync          = require('gulp-directory-sync'),
-    webserver        = require('gulp-webserver');
+    webserver        = require('gulp-webserver')
+    svgSprite        = require('gulp-svg-sprite');
 
 // Configure paths
 var paths = {
@@ -31,6 +32,7 @@ var paths = {
 
   // Static assets
   images: './src/gui/i/',
+  svgs: './src/gui/svg/',
   templates: ['./src/**/*.html'],
 
   // Outputs
@@ -117,6 +119,13 @@ gulp.task('images', function(){
 gulp.task('templates', function () {
   gulp.src(paths.templates)
     .pipe(gulp.dest(paths.tplDest));
+});
+
+// SVG sprite magic
+gulp.task('svg-sprite', function () {
+  gulp.src(paths.svgs)
+      .pipe(svgSprite())
+      .pipe(gulp.dest('out'));
 });
 
 // Deploy to gh-pages
