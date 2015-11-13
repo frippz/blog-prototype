@@ -6,6 +6,8 @@
 
 // Requirements
 var gulp             = require('gulp'),
+    gutil            = require('gulp-util'),
+    plumber          = require('gulp-plumber'),
     sourcemaps       = require('gulp-sourcemaps'),
     autoprefixer     = require('gulp-autoprefixer'),
     minifyCss        = require('gulp-minify-css'),
@@ -45,9 +47,18 @@ var paths = {
 
 };
 
+// Error handler
+var onError = function (err) {
+  gutil.beep();
+  console.log(err);
+};
+
 // Process stylesheets
 gulp.task('css', function () {
   return gulp.src(paths.css)
+    .pipe(plumber({
+      errorHandler: onError
+    }))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({browsers: ['last 2 versions']}))
     .pipe(postcss([customProperties()]))
