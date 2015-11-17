@@ -60,7 +60,10 @@ gulp.task('css', function () {
       errorHandler: onError
     }))
     .pipe(sourcemaps.init())
-    .pipe(autoprefixer({browsers: ['last 2 versions']}))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(postcss([customProperties()]))
     .pipe(concat(paths.cssOutput))
     .pipe(minifyCss({compatibility: 'ie8'}))
